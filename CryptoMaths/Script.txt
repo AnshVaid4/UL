@@ -1,0 +1,28 @@
+mod() #Modulus of 2 numbers
+gcd() #HCF/GCD of 2 numbers
+factor()  #prime factorization
+list(primes()) #gives prime numbers less than n
+xgcd() #Extended Euclidian x0, y0 OR multiplicative inverse in CRT u,v
+crt([7,11,22],[8,17,25])  #Chinese remainder theorem ([remainder],[moduli])
+euler_phi()
+
+Chinese remainder theorem
+#3x=5 mod 8
+
+k=xgcd(3,8)[1]
+mod(5*k,8)
+
+
+
+#7x=9(17)
+
+k=xgcd(7,17)[1]
+mod(9*k,17)
+
+
+
+#11x=17(25)
+
+k=xgcd(11,25)[1]
+mod(17*k,25)
+
