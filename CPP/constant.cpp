@@ -27,7 +27,7 @@ int main()
 	cout <<"Compile time constant 'x1': "<< x1;
 
 	int x2;
-	cout << "\n\nEnter valuse for 'x2': ";
+	cout << "\n\nEnter value for 'x2': ";
 	cin >> x2;
 	const int y{ x2 };
 	cout << "\nRuntime constant 'y': " << y;
@@ -54,7 +54,7 @@ int main()
 
 
 	int x20;
-	cout << "\n\nEnter valuse for 'x20': ";
+	cout << "\n\nEnter value for 'x20': ";
 	cin >> x20;
 	//constexpr int y0{ x20 };  //error since x20 value depends on user input, which is runtime
 	//constexpr int y0{ x4 };  //x4 variable is not a constant varialble, therefore it's value can be changes
@@ -86,7 +86,7 @@ int main()
 
 
 	int x200;
-	cout << "\n\nEnter valuse for 'x200': ";
+	cout << "\n\nEnter value for 'x200': ";
 	cin >> x200;
 	constexpr int y00{ x100 };
 	cout << "\nRuntime constant 'y00': " << y00;
