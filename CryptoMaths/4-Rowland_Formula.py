@@ -18,3 +18,28 @@ for i in range(0,len(sequence)):    #deducing all primes from sequence
         primes.append(sequence[i+1]-sequence[i])
         
 print(primes)
+
+
+
+
+#For SAGE MATH cell
+
+'''
+an_1=7
+elements=40
+sequence=[an_1]
+
+for n in range(2,elements):
+    an=an_1+gcd(n,an_1)
+    sequence.append(an)
+    an_1=an
+
+print(sequence)
+
+primes=[]
+for i in range(1,len(sequence)):
+    #if (i is not len(sequence)-1):# and (sequence[i+1]-sequence[i] not in primes):
+    primes.append(sequence[i]-sequence[i-1])
+        
+print(primes)
+'''
