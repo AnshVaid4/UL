@@ -5,6 +5,7 @@ list(primes()) #gives prime numbers less than n
 xgcd() #Extended Euclidian x0, y0 OR multiplicative inverse in CRT u,v
 crt([7,11,22],[8,17,25])  #Chinese remainder theorem ([remainder],[moduli])
 euler_phi()
+prime_pi()  #Prime counting function
 
 Chinese remainder theorem
 #3x=5 mod 8
