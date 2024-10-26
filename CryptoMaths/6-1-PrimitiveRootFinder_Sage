@@ -1,3 +1,6 @@
+#Find all primes p < 100 for which 3 is a primitive root modulo p.
+
+
 prime=list(primes(100))
 n=3
 
