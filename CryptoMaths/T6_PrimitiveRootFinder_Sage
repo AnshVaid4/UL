@@ -1,0 +1,13 @@
+prime=list(primes(100))
+n=3
+
+for i in prime:
+    count=0
+    if i>n:
+        for j in range(1,i):
+            if mod(n^j,i)==1:
+                count+=1
+                break
+            count+=1
+        if count==euler_phi(i):
+            print(i)
