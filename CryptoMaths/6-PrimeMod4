@@ -1,0 +1,37 @@
+'''
+ Primes are either congruent 1, 2, or 3 modulo 4. In this
+ Problem, we extend Euklid’s Lemma (which states that
+ there are infinitely many primes) to primes congruent
+ three modulo four.
+ a) List all primes congruent 2 modulo 4. Provide the first five
+ primes that are congruent 1 modulo 4. Similarly, provide
+ the first five primes that are congruent 3 modulo 4.
+ b) If a 3mod4andb 3mod4,thenab ?mod4. Findthe
+ residue ?.
+ c) Show, by using induction, if each of an even number of
+ primes q1 x q2 x q2k is congruent 3 mod 4, then the product
+ q1 x q2 x q2k-1 x q2k cong 1mod4
+ d) Finally, use the indirect argument of Euklid’s Lemma, to
+ show that there are infinitely many primes congruent 3
+ modulo four, by considering the product
+ p1 x p2 x pn +1
+ Hint: Group factors into primes 12 and 3, and then
+ applying (a) and (b)
+'''
+
+prime=list(primes(100))
+_2mod4=[]
+_3mod4=[]
+_1mod4=[]
+
+for i in prime:
+    if i%4==2:
+        _2mod4.append(i)
+    elif i%4==1:
+        _1mod4.append(i)
+    elif i%4==3:
+        _3mod4.append(i)
+
+print('Prime numbers congruent to 1 mod 4: ', _1mod4[:5])
+print('Prime numbers congruent to 2 mod 4: ', _2mod4[:5])
+print('Prime numbers congruent to 3 mod 4: ', _3mod4[:5])
