@@ -1,0 +1,23 @@
+#Verify that 2 is a primitive root modulo 53 and draw up the corre- sponding table of indices
+
+
+prime=[53]
+n=2
+flag=1
+for i in prime:
+    count=0
+    if i>n:
+        for j in range(1,i):
+            if mod(n^j,i)==1:
+                count+=1
+                break
+            count+=1
+        if count==euler_phi(i):
+            print(i)
+            flag=0
+
+print('a\t','I(a)')
+if flag==0:
+    for i in prime:
+        for j in range(1,i):
+            print(mod(n^j,i),'\t',j)
