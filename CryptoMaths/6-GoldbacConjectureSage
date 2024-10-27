@@ -1,0 +1,29 @@
+'''
+Goldbach’s conjecture states that every even integer
+ N=2k 4 can be written as the sum of two primes. In
+ mathematical terms, for every k=2 , we can find
+ primes pk, qk such that
+ 2k=pk+qk
+ There is no proof of this conjecture yet, but it is verified for
+ very large integers, upto 4 x 10^18.The first even numbers
+ are
+ 4=2+2
+ 6=3+3
+ 8=3+5
+ Write a Sage programme which verifies this conjecture for
+ the first 50 even integers, that is, for N=2k, where
+ k=1... 50.
+
+'''
+
+evenInt=list(range(4,104,2))
+for i in evenInt:
+    p=list(primes(i))
+    sum=0
+    for j in p:
+        if i-j in p:
+            print(i,'=',j,'+',i-j)
+            break
+            
+            
+        
