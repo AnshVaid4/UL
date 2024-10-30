@@ -56,7 +56,7 @@ import random
 set_random_seed(22)
 p=194813
 g=501
-k=random_prime(10^6)
+k=random_prime(10^6)  #can be any number, whether prime or not
 
 print('p',p)
 print('g',g)
