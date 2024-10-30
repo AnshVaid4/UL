@@ -1,0 +1,17 @@
+p=19
+ep=euler_phi(p)
+x=list(range(1,p))
+
+for i in x:
+    count=0
+    for j in range(1,p):
+        print(i,j,mod(i^j,p))
+        count+=1
+        if mod(i^j,p)==1:
+            break
+    if count == ep:
+        print('Primitive root:',i)
+        print()
+    else:
+        print('No primitive root:',i)
+        print()
