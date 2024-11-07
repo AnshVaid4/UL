@@ -94,25 +94,25 @@ def solgrabber(q):
     for i in range((q-1)/2):
         print(i,mod(i^2,q))
 
-for i in range(((q-1)/2)+1):
-    modq=power_mod(i,2,q)
-    if modq==a or modq==a%q:
-        print('*',end='')
-    print((i,modq),end=',')
-
-print()
 sol=0
 
 if power_mod(a,(q-1)/2,q) == q-1 or power_mod(a,(q-1)/2,q) == -1:
     print(a,"is not a quadratic residue of",q,":",power_mod(a,(q-1)/2,q))
-else:
+elif power_mod(a,(q-1)/2,q) == 1:
     sol=1
     print(a,"is a quadratic residue of",q,":",power_mod(a,(q-1)/2,q))
         
 if sol==1:
-    #solgrabber(q)
-    print()
+    for i in range(((q-1)/2)+1):
+        modq=power_mod(i,2,q)
+        if modq==a or modq==a%q:
+            print('*',end='')
+        print((i,modq),end=',')
     
+    print()
+        
+    #solgrabber(q)
+   
 ---------------------------------------------------
     
 
