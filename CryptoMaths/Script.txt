@@ -84,19 +84,36 @@ print('message',mod(inv*e2,p))
 
 ---------------------------------------------------
 
-Quadratic residue
-p=251
-q=641
+#Quadratic residue
+
+a=21
+q=43
+
+def solgrabber(q):
+    print()
+    for i in range((q-1)/2):
+        print(i,mod(i^2,q))
 
 for i in range(((q-1)/2)+1):
-    print(power_mod(i,2,641),end=',')
+    modq=power_mod(i,2,q)
+    if modq==a:
+        print('*',end='')
+    print((i,modq),end=',')
 
 print()
-    
-if power_mod(p,(q-1)/2,q) == q-1 or power_mod(p,(q-1)/2,q) == -1:
-    print(p,"is not a quadratic residue of",q,":",power_mod(p,(q-1)/2,q))
+sol=0
+
+if power_mod(a,(q-1)/2,q) == q-1 or power_mod(a,(q-1)/2,q) == -1:
+    print(a,"is not a quadratic residue of",q,":",power_mod(a,(q-1)/2,q))
 else:
-    print(p,"is a quadratic residue of",q,":",power_mod(p,(q-1)/2,q))
+    sol=1
+    print(a,"is a quadratic residue of",q,":",power_mod(a,(q-1)/2,q))
+        
+if sol==1:
+    #solgrabber(q)
+    print()
+    
+
 
 
 ---------------------------------------------------
