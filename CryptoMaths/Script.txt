@@ -82,3 +82,22 @@ print('inverse of',int(e1k),' is ',inv)
 print('message',mod(inv*e2,p))
 
 ---------------------------------------------------
+
+Quadratic residue
+p=251
+q=641
+
+for i in range(((q-1)/2)+1):
+    print(power_mod(i,2,641),end=',')
+
+print()
+    
+if power_mod(p,(q-1)/2,q) == q-1 or power_mod(p,(q-1)/2,q) == -1:
+    print(p,"is not a quadratic residue of",q,":",power_mod(p,(q-1)/2,q))
+else:
+    print(p,"is not a quadratic residue of",q,":",power_mod(p,(q-1)/2,q))
+
+
+---------------------------------------------------
+    
+
