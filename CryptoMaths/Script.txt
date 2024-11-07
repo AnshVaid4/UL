@@ -86,8 +86,8 @@ print('message',mod(inv*e2,p))
 
 #Quadratic residue
 
-a=21
-q=43
+a=58
+q=37
 
 def solgrabber(q):
     print()
@@ -96,7 +96,7 @@ def solgrabber(q):
 
 for i in range(((q-1)/2)+1):
     modq=power_mod(i,2,q)
-    if modq==a:
+    if modq==a or modq==a%q:
         print('*',end='')
     print((i,modq),end=',')
 
@@ -113,9 +113,6 @@ if sol==1:
     #solgrabber(q)
     print()
     
-
-
-
 ---------------------------------------------------
     
 
