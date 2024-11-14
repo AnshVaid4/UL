@@ -5,10 +5,21 @@ Requirements: equation of elliptic curve for a,b,c
 
 a,b,c=0,0,17
 
-x1,y1=2,-5
-x2,y2=4,9
+x1,y1=-1,4
+x2,y2=-1,4
 
-m=(y2-y1)/(x2-x1)
+try:
+    if not(x2 == x1 and y2 == y1):      #2 distinct eliptic curpve points
+        m=(y2-y1)/(x2-x1)
+    else:                               #single tangent case
+        m=((3*x1**2)+(2*a*x1)+b)/(2*y1)
 
-print('x3: ', str(-a+m**2-x1-x2))
-print('y3: ', str(y1+m*(-a+m**2-(2*x1)-x2)))
+except: #divide by 0
+    m=0
+
+if not(x2 == x1 and y2 == y1):
+    print('x3: ', str(-a+m**2-x1-x2))
+    print('y3: ', str(y1+m*(-a+m**2-(2*x1)-x2)))
+else:
+    print('x2: ', str(-a+m**2-(2*x1)))
+    print('y2: ', str(y1+m*(-a+m**2-(3*x1))))
