@@ -1,4 +1,5 @@
 #index table
+#Discrete log, use> if mod(g^i,p)==n: whose residue is known but the g^i where i has to be found
 
 p=13
 g=2
