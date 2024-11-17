@@ -16,7 +16,7 @@ for i in prime:
             print(i)
             flag=0
 
-print('a\t','I(a)')
+print('a\t','I(a) [power of g that gives residue a]')
 if flag==0:
     for i in prime:
         for j in range(1,i):
