@@ -30,6 +30,9 @@ mod(17*k,25)
 -----------------------------------------------------
 
 ###EEA extended euclidian algorithm
+a=987654321
+b=123456789 
+
 def eea(a,b):
     try:
         if a%b>=0:
@@ -37,10 +40,12 @@ def eea(a,b):
             eea(b,a%b)
     except:
         exit(0)
-a=13579
-b=2468
-eea(a,b)
-#print(a//b,(a//b)*(b),a%b)
+
+if a>b:
+    eea(a,b)
+else:
+    eea(b,a)
+
 
 -----------------------------------------------------
 
