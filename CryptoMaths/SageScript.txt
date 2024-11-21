@@ -146,3 +146,24 @@ P+Q
 
 ---------------------------------------------------
 
+#Deffie Hellman key exchange
+
+PRI_A=15
+PUB_A=power_mod(11,PRI_A,73)
+
+PRI_B=18
+PUB_B=power_mod(11,PRI_B,73)
+
+print('public keys shared by A & B respectively: ',PUB_A,PUB_B)
+
+SEC_A=power_mod(PUB_B,PRI_A,73)
+SEC_B=power_mod(PUB_A,PRI_B,73)
+
+print('shared key computed: ',SEC_A,SEC_B)
+
+'''
+OUTPUT: public keys shared by A & B respectively:  7 46
+shared key computed:  27 27
+'''
+
+---------------------------------------------------
