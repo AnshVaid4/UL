@@ -85,7 +85,7 @@ print('g',g)
 print('k',k)
 
 a=mod(g^k,p)  
-print('a',mod(g^k,p))  #g and p are sent, k is secret key
+print('a',mod(g^k,p))  #g and p and a are sent, k is secret key
 
 m=192746       #message smaller than p
 r=999999       #random number r
