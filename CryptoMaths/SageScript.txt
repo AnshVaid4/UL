@@ -168,3 +168,17 @@ shared key computed:  27 27
 '''
 
 ---------------------------------------------------
+
+#Finding all points on modulo elliptic curve
+
+p=5
+E=EllipticCurve(GF(p),[0,-3,0,3,0])
+for i in range(0,p):
+    for j in range(0,p):
+        try:
+            E(i,j)
+            print('(',i,j,')')
+        except:
+            continue
+
+---------------------------------------------------
