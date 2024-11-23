@@ -147,25 +147,29 @@ P+Q
 
 ---------------------------------------------------
 
-#Deffie Hellman key exchange
+'''
+Deffie hellman key exchange algorithm, which is based on primitive roots concept
 
-PRI_A=15
-PUB_A=power_mod(11,PRI_A,73)
+Ax: Private key of A
+Bx: Private key of B
 
-PRI_B=18
-PUB_B=power_mod(11,PRI_B,73)
+Ay: Public key of A
+By: Public key of B
 
-print('public keys shared by A & B respectively: ',PUB_A,PUB_B)
-
-SEC_A=power_mod(PUB_B,PRI_A,73)
-SEC_B=power_mod(PUB_A,PRI_B,73)
-
-print('shared key computed: ',SEC_A,SEC_B)
+g is primitive root of prime number p
 
 '''
-OUTPUT: public keys shared by A & B respectively:  7 46
-shared key computed:  27 27
-'''
+
+Ax=84358759
+Bx=4653788
+
+g,p=6,61
+
+Ay=g^Ax%p
+By=g^Bx%p
+
+'''key that is used for encryption is computed as follows by A and B. This way the key is not even exposed in internet.'''
+(power_mod(By,Ax,p),power_mod(Ay,Bx,p))
 
 ---------------------------------------------------
 
