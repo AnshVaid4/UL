@@ -173,7 +173,7 @@ By=g^Bx%p
 
 ---------------------------------------------------
 
-#Finding all points on modulo elliptic curve
+#Finding all points on modulo elliptic curve (include explicitly the point at infinity)
 
 p=5
 E=EllipticCurve(GF(p),[0,-3,0,3,0])
