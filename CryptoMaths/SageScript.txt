@@ -186,3 +186,32 @@ for i in range(0,p):
             continue
 
 ---------------------------------------------------
+
+#Finding Np and ap(p defect) for elliptic curve equations
+
+p=5
+equation=[[0,0,0,2,0],[0,0,0,4,2],[0,0,0,1,0],[0,0,0,3,2],[0,0,0,0,1],[0,0,0,2,1],[0,0,0,4,0],[0,0,0,1,1],[0,0,0,3,0]]
+for i in equation:
+    print(GF(p),EllipticCurve(i))
+    print('N5',1+5-(2*sqrt(5).n()),'< N5 <',1+5+(2*sqrt(5).n()))
+    
+    sum=0
+    legendre=[]
+    for j in range(0,p):
+        x=0
+        if i[1] !=0:
+            x+=i[1]*j**2
+        if i[3] !=0:
+            x+=i[3]*j
+        if i[4] !=0:
+            x+=i[4]
+        x+=j**3%p
+        legendre.append((x,legendre_symbol(x,p)))
+        sum+=legendre_symbol(x,p)
+    print('(x, legendreSymbol):',legendre)
+    print('n5:',sum+1+p)
+    print('p-defect:',1+p-(sum+1+p))
+
+    print('------------------\n')
+
+---------------------------------------------------
