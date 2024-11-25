@@ -188,7 +188,6 @@ for i in range(0,p):
 ---------------------------------------------------
 
 #Finding Np and ap(p defect) for elliptic curve equations
-
 p=5
 equation=[[0,0,0,2,0],[0,0,0,4,2],[0,0,0,1,0],[0,0,0,3,2],[0,0,0,0,1],[0,0,0,2,1],[0,0,0,4,0],[0,0,0,1,1],[0,0,0,3,0]]
 for i in equation:
@@ -211,6 +210,7 @@ for i in equation:
     print('(x, legendreSymbol):',legendre)
     print('n5:',sum+1+p)
     print('p-defect:',1+p-(sum+1+p))
+    print('p-defect < 2*root(p): ',1+p-(sum+1+p),'<',2*sqrt(p).n())
 
     print('------------------\n')
 
