@@ -173,62 +173,57 @@ By=g^Bx%p
 
 ---------------------------------------------------
 
-#Finding all points on modulo elliptic curve (include explicitly the point at infinity)
+#Finding all co-ordiantes on elliptic curve equations mod p, including point at infinity
 
 p=5
-E=EllipticCurve(GF(p),[0,-3,0,3,0])
-for i in range(0,p):
-    for j in range(0,p):
-        try:
-            E(i,j)
-            print('(',i,j,')')
-        except:
-            continue
-
----------------------------------------------------
-
-p=5
-equation=[[0,0,0,3,0],[0,0,0,3,2],[0,0,0,3,3]]
+equation=[[0,0,0,3,0],[0,0,0,3,1],[0,0,0,3,2],[0,0,0,3,3],[0,0,0,3,4]]
 for i in equation:
-    points=[]
-    E=EllipticCurve(GF(p),i)
-    for i in range(0,p):
-        for j in range(0,p):
-            try:
-                E(i,j)
-                points.append((i,j))
-            except:
-                continue
-    points.append(('OE'))
-    print(len(points),'points:',points)
+    try:
+        points=[]
+        E=EllipticCurve(GF(p),i)
+        for i in range(0,p):
+            for j in range(0,p):
+                try:
+                    E(i,j)
+                    points.append((i,j))
+                except:
+                    continue
+        points.append(('OE'))
+        print(len(points),'points:',points)
+    except:
+        print("Not possible for",i)
 
 ---------------------------------------------------
 
 #Finding Np and ap(p defect) for elliptic curve equations
 p=5
+#equation=[[0,0,0,3,0],[0,0,0,3,1],[0,0,0,3,2],[0,0,0,3,3],[0,0,0,3,4]]
 equation=[[0,0,0,2,0],[0,0,0,4,2],[0,0,0,1,0],[0,0,0,3,2],[0,0,0,0,1],[0,0,0,2,1],[0,0,0,4,0],[0,0,0,1,1],[0,0,0,3,0]]
 for i in equation:
-    print(GF(p),EllipticCurve(i))
-    print('N5',1+5-(2*sqrt(5).n()),'< N5 <',1+5+(2*sqrt(5).n()))
+    try:
+        print(EllipticCurve(GF(p),i))
+        print('N5',1+5-(2*sqrt(5).n()),'< N5 <',1+5+(2*sqrt(5).n()))
     
-    sum=0
-    legendre=[]
-    for j in range(0,p):
-        x=0
-        if i[1] !=0:
-            x+=i[1]*j**2
-        if i[3] !=0:
-            x+=i[3]*j
-        if i[4] !=0:
-            x+=i[4]
-        x+=j**3%p
-        legendre.append((x,legendre_symbol(x,p)))
-        sum+=legendre_symbol(x,p)
-    print('(x, legendreSymbol):',legendre)
-    print('n5:',sum+1+p)
-    print('p-defect:',1+p-(sum+1+p))
-    print('p-defect < 2*root(p): ',1+p-(sum+1+p),'<',2*sqrt(p).n())
+        sum=0
+        legendre=[]
+        for j in range(0,p):
+            x=0
+            if i[1] !=0:
+                x+=i[1]*j**2
+            if i[3] !=0:
+                x+=i[3]*j
+            if i[4] !=0:
+                x+=i[4]
+            x+=j**3%p
+            legendre.append((x,legendre_symbol(x,p)))
+            sum+=legendre_symbol(x,p)
+        print('(x, legendreSymbol):',legendre)
+        print('n5:',sum+1+p)
+        print('p-defect:',1+p-(sum+1+p))
+        print('p-defect < 2*root(p): ',1+p-(sum+1+p),'<',2*sqrt(p).n())
 
-    print('------------------\n')
-
+        print('------------------\n')
+    except:
+        print("Points not possible on ",i)
+        print('------------------\n')
 ---------------------------------------------------
