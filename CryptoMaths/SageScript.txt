@@ -50,28 +50,6 @@ else:
 
 -----------------------------------------------------
 
-#successive squaring
-
-x=7
-m=101
-power=33
-sum=0
-mods=['n']
-for i in range(0,int(sqrt(power).n())):
-    if sum>=32:
-        print('hello')
-        break
-    else:
-        if x**i <= m:
-            print(x,'^',2**i,'%',m,'=',x**i%m)
-        else:
-            print(x,'^',2**i,'%',m,'=>',x**i,'%',m,'=>',x**i%m)
-        mods.append(x**i%m)
-        sum+=2**i
-        
-
------------------------------------------------------
-
 #### Discrete log mod results and index(a)
 
 a=[]
