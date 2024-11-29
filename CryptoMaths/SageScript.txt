@@ -274,3 +274,21 @@ while k<100:
     k+=1
 
 ---------------------------------------------------
+
+#POLLARD’S p − 1 METHOD factorization
+
+i=0
+n=1711
+B=4
+k=factorial(B)
+print('k!=',k)
+while True:
+    b=power_mod(i,k,n)
+    gcd_=gcd(b-1,n)
+    print(i,'^',k,'%',n,'=> ',b,'||  gcd(',b,'-1,',n,') => ',gcd_)
+    if gcd_ !=1 and gcd_ !=n:
+        print('=====>',gcd_,n/gcd_)
+        break
+    i+=1
+
+---------------------------------------------------
