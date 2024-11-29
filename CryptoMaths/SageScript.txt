@@ -202,7 +202,7 @@ equation=[[0,0,0,2,0],[0,0,0,4,2],[0,0,0,1,0],[0,0,0,3,2],[0,0,0,0,1],[0,0,0,2,1
 for i in equation:
     try:
         print(EllipticCurve(GF(p),i))
-        print('N5',1+5-(2*sqrt(5).n()),'< N5 <',1+5+(2*sqrt(5).n()))
+        print('Np',1+p-(2*sqrt(p).n()),'< Np <',1+p+(2*sqrt(p).n()))
     
         sum=0
         legendre=[]
