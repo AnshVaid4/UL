@@ -248,3 +248,29 @@ for i in range(int(sqrt(n).n()),int(sqrt(n).n())*2):
         
 ---------------------------------------------------
 
+# Pollard's RHO factorization method
+n=1357
+x0=3
+
+xk=[]
+k=0
+print('k\t xk \t j \t xj \t gcd(xk−xj,n)')
+while k<100:
+    if k==0:
+        k+=1
+        xk.append(x0)
+        print(k,x0%n,'-','-','-',sep='\t')
+        continue
+    for r in range(0,200):
+        if 2^r<=k and k<2^(r+1):
+            break
+    j=2^r-1
+    x0=x0^2+1      #==================================================Change the function
+    xk.append(x0%n)
+    print(k,x0%n,j,xk[j],gcd(x0-xk[j],n),sep='\t')
+    if gcd(x0-xk[j],n) !=1:
+        print('===>',gcd(x0-xk[j],n),n/gcd(x0-xk[j],n),sep='\t')
+        break
+    k+=1
+
+---------------------------------------------------
