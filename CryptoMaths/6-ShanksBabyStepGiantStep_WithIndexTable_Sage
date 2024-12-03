@@ -1,14 +1,17 @@
 #UseShank's Baby-step Giant-step algorithm to solve
 
 
-#5^x cong 96 mod317
+#2^x cong 7 mod 19
 
-a=96
-g=5
-p=317
+a=7
+g=2
+p=19
 s=int(ceil(sqrt(float(p-1))))
 babystep=list(range(0,s))
 giantstep=list(range(1,s+1))
+
+print('S=sqrt(p-1)=',s,'\ni=',babystep,'\nj=',giantstep)
+print()
 
 l_babystep=[]
 l_giantstep=[]
@@ -20,14 +23,13 @@ for j in giantstep:
     l_giantstep.append((mod(g^(j*s),p),j*s))
 
     
-print(l_babystep)
-print(l_giantstep)
+print('S(a*g^i mod p, i)=',l_babystep)
+print('T(g^(j*s) mod p, js)=',l_giantstep)
 
 for i in l_babystep:
     for j in l_giantstep:
         if j[0] == i[0]:
-            print(i,'x=>',j[1]-i[1])
-
+            print(i,'x=js-i=>',j[1]-i[1])
 
 #======================================================================================================= Solution using Index Table
 
