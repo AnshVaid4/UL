@@ -257,9 +257,9 @@ k=0
 print('k\t xk \t j \t xj \t gcd(xk−xj,n)')
 while k<100:
     if k==0:
-        k+=1
         xk.append(x0)
         print(k,x0%n,'-','-','-',sep='\t')
+        k+=1
         continue
     for r in range(0,200):
         if 2^r<=k and k<2^(r+1):
