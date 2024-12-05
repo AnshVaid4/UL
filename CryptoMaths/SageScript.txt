@@ -234,11 +234,11 @@ for i in equation:
 
 n=30049
 print("Square root of number: ", sqrt(30049).n())
-print("i, s_square, t")
+print("i,\t s_square,\t t")
 for i in range(int(sqrt(n).n()),int(sqrt(n).n())*2):
     s_square=i**2
     t=sqrt(s_square-n)
-    print(i,s_square,t.n(),end='')
+    print(i,'\t',s_square,'\t\t',t.n(),end='')
     if type(t)==sage.symbolic.expression.Expression:
         print()
         continue
