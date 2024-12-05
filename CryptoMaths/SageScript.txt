@@ -263,7 +263,7 @@ while k<100:
         continue
     for r in range(0,200):
         if 2^r<=k and k<2^(r+1):
-            break
+            break        #=================Remove it to get multiple solutions
     j=2^r-1
     x0=x0^2+1      #==================================================Change the function
     xk.append(x0%n)
