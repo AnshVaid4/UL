@@ -33,9 +33,9 @@ for i in l_babystep:
 
 #======================================================================================================= Solution using Index Table
 
-prime=[317]
-n=5
-a=96
+prime=[13]
+n=2
+a=6
 flag=1
 for i in prime:
     count=0
@@ -49,9 +49,9 @@ for i in prime:
             print(i)
             flag=0
 
-print('a\t','I(a)')
+print('I(a)\t','k')
 if flag==0:
     for i in prime:
         for j in range(1,i):
             if mod(n^j,i)==a:
-                print(mod(n^j,i),'\t',j)
+                print('I(',mod(n^j,i),')','\t',j,sep='')
