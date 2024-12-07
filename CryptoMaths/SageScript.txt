@@ -106,35 +106,25 @@ print('message',mod(inv*e2,p))
 
 ---------------------------------------------------
 
-#Quadratic residue
+#Check if x is a quadratic residue of p or not
 
-a=58
-q=37
+p=37
+x=58
+qr=[]
+for i in range(1,p//2):
+    qr.append(i**2%p)
+print('Quadratic residue of',p,'are:',sorted(qr))
 
-def solgrabber(q):
-    print()
-    for i in range((q-1)/2):
-        print(i,mod(i^2,q))
+if x in qr or x%p in qr:
+    print(x,'=>',x%p,'is a Quadratic Residue of',p)
+else:
+    print(x,'is NOT a quadratic residue of',p)
 
-sol=0
+try:
+    print('Legendre symbol:',legendre_symbol(x,p))
+except:
+    print('Jacobi symbol:',jacobi_symbol(x,p))
 
-if power_mod(a,(q-1)/2,q) == q-1 or power_mod(a,(q-1)/2,q) == -1:
-    print(a,"is not a quadratic residue of",q,":",power_mod(a,(q-1)/2,q))
-elif power_mod(a,(q-1)/2,q) == 1:
-    sol=1
-    print(a,"is a quadratic residue of",q,":",power_mod(a,(q-1)/2,q))
-        
-if sol==1:
-    for i in range(((q-1)/2)+1):
-        modq=power_mod(i,2,q)
-        if modq==a or modq==a%q:
-            print('*',end='')
-        print((i,modq),end=',')
-    
-    print()
-        
-    #solgrabber(q)
-   
 ---------------------------------------------------
     
 #Elliptic curve addition of 2 points
