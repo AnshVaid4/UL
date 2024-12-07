@@ -111,7 +111,7 @@ print('message',mod(inv*e2,p))
 p=37
 x=58
 qr=[]
-for i in range(1,p//2):
+for i in range(1,(p//2)+1):
     qr.append(i**2%p)
 print('Quadratic residues a=x^2 mod',p,'are:',sorted(qr))
 
@@ -123,7 +123,7 @@ else:
 try:
     print('Legendre symbol:',legendre_symbol(x,p))
 except:
-    print('Jacobi symbol:',jacobi_symbol(x,p))p))
+    print('Jacobi symbol:',jacobi_symbol(x,p))
 
 ---------------------------------------------------
     
