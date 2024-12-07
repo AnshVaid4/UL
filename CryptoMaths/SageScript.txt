@@ -106,7 +106,7 @@ print('message',mod(inv*e2,p))
 
 ---------------------------------------------------
 
-#Check if x is a quadratic residue of p or not
+#Check if x is a Quadratic Residue of p or not
 
 p=37
 x=58
@@ -126,7 +126,20 @@ except:
     print('Jacobi symbol:',jacobi_symbol(x,p))
 
 ---------------------------------------------------
-    
+
+# Even powers of primitive root are Quadratic Residue
+
+p=37
+g=2
+qr=[]
+for i in range(1,(p//2)+1):
+    try:
+        print(i,(g**i%p),legendre_symbol((g**i%p),p))
+    except:
+        print(i,(g**i%p),jacobi_symbol((g**i%p),p))
+
+---------------------------------------------------
+
 #Elliptic curve addition of 2 points
 E=EllipticCurve([0,17])
 print(E)
