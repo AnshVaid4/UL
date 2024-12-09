@@ -221,7 +221,7 @@ for i in equation:
             x+=j**3%p
             legendre.append((x,legendre_symbol(x,p)))
             sum+=legendre_symbol(x,p)
-        print('(x, legendreSymbol):',legendre)
+        print('(x, legendreSymbol):',legendre)    #Substitute value of x with legendre symbol 1 in equation and get sqrt(x) to get (x,+-y)
         print('n5:',sum+1+p)
         print('p-defect:',1+p-(sum+1+p))
         print('p-defect < 2*root(p): ',1+p-(sum+1+p),'<',2*sqrt(p).n())
