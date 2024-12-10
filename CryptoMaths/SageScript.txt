@@ -1,3 +1,4 @@
+#https://ulcampus-my.sharepoint.com/:f:/g/personal/24010138_studentmail_ul_ie/EhQ_Jbd9urJDoPdxpd6SEtQBG94Ux8P4oWS9eJ93DWzVwg?e=LuQVZd
 mod() #Modulus of 2 numbers
 gcd() #HCF/GCD of 2 numbers
 factor()  #prime factorization
