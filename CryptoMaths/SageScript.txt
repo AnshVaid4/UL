@@ -235,9 +235,8 @@ for i in equation:
 
 #Fermat factorization
 
-
 n=30049
-print("Square root of number: ", sqrt(30049).n())
+print("Square root of number: ", sqrt(n).n())
 print("s,\t s_square,\t t")
 for s in range(int(sqrt(n).n()),int(sqrt(n).n())*2):
     s_square=s**2
@@ -250,6 +249,7 @@ for s in range(int(sqrt(n).n()),int(sqrt(n).n())*2):
         print("=======> s^2-t^2: (",sqrt(s_square),'-',t,')','(',sqrt(s_square),'+',t,') =======>',sqrt(s_square)-t,'*',sqrt(s_square)+t)
         break
         
+
 ---------------------------------------------------
 
 # Pollard's RHO factorization method
