@@ -74,6 +74,22 @@ for i in a:
 
 -----------------------------------------------------
 
+### RSA
+
+p=13
+q=17
+m=p*q
+print(m)
+k=47
+print(xgcd(k,euler_phi(m)))
+print(-49%euler_phi(m))
+d=143
+msg=45
+cipher=msg^d%m
+cipher^k%m
+
+-----------------------------------------------------
+
 ### Elgamel encryption
 import random
 set_random_seed(22)
