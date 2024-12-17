@@ -16,6 +16,33 @@ public:
 	
 	alpha& operator=(alpha& x)		//assignment operator overload for deep copy
 	{
+		if (this->data==x.data && this->size ==x.size)
+		{
+			return *this;
+		}
+
+		if (this->size > x.size)
+		{
+			data = new int[size];
+			for (int i = 0; i < x.size; i++)
+			{
+				data[i] = x.data[i];
+			}
+
+			return *this;
+		}
+
+		if (this->size < x.size)
+		{
+			data = new int[size];
+			for (int i = 0; i < this->size; i++)
+			{
+				data[i] = x.data[i];
+			}
+
+			return *this;
+		}
+
 		size = x.size;
 		data = new int[size];
 		for (int i = 0; i < x.size; i++)
