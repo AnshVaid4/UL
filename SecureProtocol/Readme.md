@@ -1,0 +1,1 @@
+<p>The code present here is the part of assignment for a module 'Communications & Security Protocols' where the 3 clients has to authenticate with server and then generate a seacret key mutually which is used to create an end-2-end encryption of the messages between the clients relayed by the central server.</p>
